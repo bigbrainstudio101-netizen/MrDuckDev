@@ -1,9 +1,147 @@
-.navbar-item {
-    display: inline-block;
-    padding: 10px 20px;
-    text-decoration: none;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        nav {
+            background-color: #ff5a5a;
+            padding: 1.5rem 2rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            flex: 1;
+            justify-content: center;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            transition: opacity 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+        .nav-links a.active {
+            border-bottom: 2px solid white;
+            padding-bottom: 0.25rem;
+        }
+
+        .nav-links .dropdown {
+            position: relative;
+        }
+
+        .nav-links .dropdown::after {
+            content: '▼';
+            font-size: 0.6rem;
+            margin-left: 0.5rem;
+            opacity: 0.8;
+        }
+
+        .bag-icon {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            transition: opacity 0.3s ease;
+        }
+
+        .bag-icon:hover {
+            opacity: 0.8;
+        }
+
+        .bag-icon svg {
+            width: 24px;
+            height: 24px;
+            stroke: white;
+            stroke-width: 2;
+            fill: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar-container {
+                gap: 1rem;
+            }
+
+            .nav-links {
+                gap: 1.5rem;
+                font-size: 0.9rem;
+            }
+
+            nav {
+                padding: 1rem;
+            }
+
+            .bag-icon {
+                font-size: 0.85rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.8rem;
+            }
+
+            .bag-icon svg {
+                width: 20px;
+                height: 20px;
+            }
+
+            .bag-icon span {
+                display: none;
+            }
+        }
+
+.title {
+    font-size: 2rem;
     color: #333;
-    font-weight: bold;
     text-align: center;
-    
+    margin-top: 2rem;
 }
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.paragraph {
+    font-size: 1rem;
+    color: #444;
+    text-align: center;
+    margin-top: 1rem;
+    line-height: 1.5;
+}
+
